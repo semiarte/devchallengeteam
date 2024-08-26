@@ -1,0 +1,64 @@
+.montserrat {
+    font-family: Montserrat, sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.ptserif {
+    font-family: "PT Serif", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.poppins {
+    font-family: Poppins, sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+header {
+    font-size: 18px;
+    h2 {
+        font-size: 1em;
+        font-weight: 600;
+    }
+    p {
+        font-size: 0.7777777777777778em;
+        @include respond-above(sm) {
+            font-size: 1em;
+        }
+    }
+}
+.employee {
+    &_name {
+        font-size: 14px;
+        font-weight: 600;
+        @include respond-above(sm) {
+            font-size: 18px;
+        }
+    }
+    &_position {
+        font-size: 10px;
+        font-weight: 400;
+        @include respond-above(sm) {
+            font-size: 12px;
+        }
+    }
+}
+footer {
+    color:#A9A9A9;
+    p.montserrat {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.5;
+        text-align: center;
+    }
+    a {
+        color:#A9A9A9;
+        transition: all ease-in-out .3s;
+        &:hover {
+            color: black;
+            text-decoration: none;
+        }
+    }
+    span {
+        font-weight: 700;
+    }
+}

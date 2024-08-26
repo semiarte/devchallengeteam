@@ -1,0 +1,34 @@
+/// Media query mixins
+/// @author Glenn McComb
+/// @link https://glennmccomb.com/articles/useful-sass-scss-media-query-mixins-for-bootstrap/
+$breakpoints: (
+        xxsm: 20em,      //320px
+        xsm: 23.4375em,  //375px
+        sm: 41.142857142857146em, //576px
+        md: 57em,        //912px Surface PRO
+        xmd: 67.5em,     //1080px
+        lg: 80.625em,     //1290px
+        ipadPro: 64em   //1024px
+);
+
+@mixin respond-above($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breapoint}.';
+  }
+}
+
+@mixin respond-belowe($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    @media (max-width: $breakpoint-value) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breapoint}.';
+  }
+}

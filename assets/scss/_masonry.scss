@@ -1,0 +1,23 @@
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    @include respond-above(sm) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    > div:nth-child(2) {
+        padding-top: 80px;
+    }
+    @include respond-above(sm) {
+        > div:nth-child(5) {
+            padding-top: 80px;
+        }
+    }
+}
+.employee {
+    display: flex;
+}
+.vertical {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+}
